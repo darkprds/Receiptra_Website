@@ -37,14 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
             mainNav.classList.toggle('mobile-nav-open');
             mobileNavToggle.classList.toggle('is-active'); // For styling the button itself
 
-            // Toggle icon visibility
-            if (mainNav.classList.contains('mobile-nav-open')) {
-                hamburgerIcon.style.display = 'none';
-                closeIcon.style.display = 'inline';
-            } else {
-                hamburgerIcon.style.display = 'inline';
-                closeIcon.style.display = 'none';
-            }
+            // Toggle icon visibility using Tailwind's 'hidden' class
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
         });
     }
     // --- End Mobile Nav Toggle ---
